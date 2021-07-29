@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import MuscleLinkButton from "./MusclesLinkButton";
 
 const Main = () => {
   return (
     <Wrapper>
       <h1>부위별 운동 방법</h1>
       <ButtonBox>
-        <MuscleButton>가슴</MuscleButton>
-        <MuscleButton>등</MuscleButton>
-        <MuscleButton>어깨</MuscleButton>
-        <MuscleButton>하체</MuscleButton>
+        <MuscleLinkButton address="chest" muscleKoreaName="가슴" />
+        <MuscleLinkButton address="back" muscleKoreaName="등" />
+        <MuscleLinkButton address="shoulder" muscleKoreaName="어깨" />
+        <MuscleLinkButton address="lowerBody" muscleKoreaName="하체" />
       </ButtonBox>
       <ButtonBox>
-        <MuscleButton>삼두</MuscleButton>
-        <MuscleButton>이두</MuscleButton>
-        <MuscleButton>복근</MuscleButton>
+        <MuscleLinkButton address="triceps" muscleKoreaName="삼두" />
+        <MuscleLinkButton address="biceps" muscleKoreaName="이두" />
+        <MuscleLinkButton address="abs" muscleKoreaName="복근" />
       </ButtonBox>
     </Wrapper>
   );
@@ -24,17 +25,11 @@ const Wrapper = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 930px;
+  width: 100vw;
+  height: 100vh;
 `;
 const ButtonBox = styled.div`
   display: block;
 `;
 
-const MuscleButton = styled.button`
-  width: 250px;
-  height: 250px;
-  margin: 50px;
-  border-radius: 50%;
-`;
 export default Main;

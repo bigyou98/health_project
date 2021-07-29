@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Abs = () => {
-  return <div></div>;
+  return <div>복근</div>;
 };
