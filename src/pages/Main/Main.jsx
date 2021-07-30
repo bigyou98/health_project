@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import MuscleLinkButton from "./MusclesLinkButton";
+import MuscleLinkButton from "./components/MusclesLinkButton";
 
 const Main = () => {
   return (
     <Wrapper>
       <h1>부위별 운동 방법</h1>
       <ButtonBox>
-        <MuscleLinkButton address="chest" muscleKoreaName="가슴" />
-        <MuscleLinkButton address="back" muscleKoreaName="등" />
-        <MuscleLinkButton address="shoulder" muscleKoreaName="어깨" />
-        <MuscleLinkButton address="lowerBody" muscleKoreaName="하체" />
+        <MuscleLinkButton address="/muscles/chest" muscleKoreaName="가슴" />
+        <MuscleLinkButton address="/muscles/back" muscleKoreaName="등" />
+        <MuscleLinkButton address="//muscles/shoulder" muscleKoreaName="어깨" />
+        <MuscleLinkButton
+          address="//muscles/lowerBody"
+          muscleKoreaName="하체"
+        />
       </ButtonBox>
       <ButtonBox>
-        <MuscleLinkButton address="triceps" muscleKoreaName="삼두" />
-        <MuscleLinkButton address="biceps" muscleKoreaName="이두" />
-        <MuscleLinkButton address="abs" muscleKoreaName="복근" />
+        <MuscleLinkButton address="/muscles/triceps" muscleKoreaName="삼두" />
+        <MuscleLinkButton address="//muscles/biceps" muscleKoreaName="이두" />
+        <MuscleLinkButton address="/muscles/abs" muscleKoreaName="복근" />
       </ButtonBox>
     </Wrapper>
   );

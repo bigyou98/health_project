@@ -15,13 +15,13 @@ const Root = () => {
   return (
     <BrowserRouter>
       <Route exact path="/" component={Main} />
-      <Route path="/chest" component={Chest} />
-      <Route path="/abs" component={Abs} />
-      <Route path="/back" component={Back} />
-      <Route path="/biceps" component={Biceps} />
-      <Route path="/lowerBody" component={LowerBody} />
-      <Route path="/shoulder" component={Shoulder} />
-      <Route path="/triceps" component={Triceps} />
+      <Route path="/muscles/chest" component={Chest} />
+      <Route path="/muscles/abs" component={Abs} />
+      <Route path="/muscles/back" component={Back} />
+      <Route path="/muscles/biceps" component={Biceps} />
+      <Route path="/muscles/lowerBody" component={LowerBody} />
+      <Route path="/muscles/shoulder" component={Shoulder} />
+      <Route path="/muscles/triceps" component={Triceps} />
     </BrowserRouter>
   );
 };
