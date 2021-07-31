@@ -1,24 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import MuscleLinkButton from "./components/MusclesLinkButton";
+import MuscleLink from "./components/MusclesLink";
 
 const Main = () => {
   return (
     <Wrapper>
       <h1>부위별 운동 방법</h1>
       <ButtonBox>
-        <MuscleLinkButton address="/muscles/chest" muscleKoreaName="가슴" />
-        <MuscleLinkButton address="/muscles/back" muscleKoreaName="등" />
-        <MuscleLinkButton address="//muscles/shoulder" muscleKoreaName="어깨" />
-        <MuscleLinkButton
-          address="//muscles/lowerBody"
-          muscleKoreaName="하체"
-        />
+        <MuscleButton>
+          <MuscleLink address="/muscles/chest" muscleKoreaName="가슴" />{" "}
+        </MuscleButton>
+        <MuscleButton>
+          <MuscleLink address="/muscles/back" muscleKoreaName="등" />
+        </MuscleButton>
+        <MuscleButton>
+          <MuscleLink address="//muscles/shoulder" muscleKoreaName="어깨" />
+        </MuscleButton>
+        <MuscleButton>
+          <MuscleLink address="//muscles/lowerBody" muscleKoreaName="하체" />
+        </MuscleButton>
       </ButtonBox>
       <ButtonBox>
-        <MuscleLinkButton address="/muscles/triceps" muscleKoreaName="삼두" />
-        <MuscleLinkButton address="//muscles/biceps" muscleKoreaName="이두" />
-        <MuscleLinkButton address="/muscles/abs" muscleKoreaName="복근" />
+        <MuscleButton>
+          <MuscleLink address="/muscles/triceps" muscleKoreaName="삼두" />
+        </MuscleButton>
+        <MuscleButton>
+          <MuscleLink address="//muscles/biceps" muscleKoreaName="이두" />
+        </MuscleButton>
+        <MuscleButton>
+          <MuscleLink address="/muscles/abs" muscleKoreaName="복근" />
+        </MuscleButton>
       </ButtonBox>
     </Wrapper>
   );
@@ -34,5 +45,14 @@ const Wrapper = styled.div`
 const ButtonBox = styled.div`
   display: block;
 `;
-
+const MuscleButton = styled.button`
+  width: 250px;
+  height: 250px;
+  margin: 50px;
+  border-radius: 50%;
+  transition: transform, 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
 export default Main;
