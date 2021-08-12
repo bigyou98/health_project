@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Header } from "../../../components/Muscles_components";
-import exerciseData from "../../../dummy/exerciseData";
+import { Header } from "components/Muscles_components";
+import exerciseData from "dummy/exerciseData";
 
 export const Chest = () => {
   const [chestData, setChestData] = useState(exerciseData.chest.benchPress);
-  const changeBenchPress = (e) => {
-    console.log(e);
-    console.log(e.target);
-    console.log(e.target.value);
+  const changeBenchPress = () => {
     setChestData(exerciseData.chest.benchPress);
   };
   const changeChestPress = () => {
@@ -17,15 +14,11 @@ export const Chest = () => {
   const changePly = () => {
     setChestData(exerciseData.chest.ply);
   };
-  // props의 name이나 key를 활용해서 해보자
-
   return (
     <div>
       <Header />
       <Type>
-        <ChestType name="bentz" onClick={changeBenchPress}>
-          벤치프레스
-        </ChestType>{" "}
+        <ChestType onClick={changeBenchPress}>벤치프레스</ChestType>{" "}
         <ChestType onClick={changeChestPress}>체스트프레스</ChestType>{" "}
         <ChestType onClick={changePly}>플라이</ChestType>
       </Type>
