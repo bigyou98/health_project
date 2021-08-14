@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Header } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
+import { ExerciseVideo, ExerciseDetail } from "components/Muscles_components";
 
 export const Chest = () => {
   const [chestData, setChestData] = useState(exerciseData.chest.benchPress);
@@ -22,28 +23,8 @@ export const Chest = () => {
         <ChestType onClick={changeChestPress}>체스트프레스</ChestType>{" "}
         <ChestType onClick={changePly}>플라이</ChestType>
       </Type>
-      <Video src={chestData.src}></Video>
-
-      <Detail>
-        <Big>운동방법</Big>
-        <ol>
-          {chestData.exerciseMethod.map((item, index) => (
-            <li key={index.toString()}>{item}</li>
-          ))}
-        </ol>
-        <Big2>좋은 자세</Big2>
-        <ul>
-          {chestData.goodPostureContent.map((item, index) => (
-            <li key={index.toString()}>{item}</li>
-          ))}
-        </ul>
-        <Big2>나쁜 자세</Big2>
-        <ul>
-          {chestData.badPostureContent.map((item, index) => (
-            <li key={index.toString()}>{item}</li>
-          ))}
-        </ul>
-      </Detail>
+      <ExerciseVideo src={chestData.src}></ExerciseVideo>
+      <ExerciseDetail exerciseData={chestData} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const MusclesLink = ({ address, muscleKoreaName, circle }) => {
+const MusclesLink = ({ address, muscleKoreaName, circle = false }) => {
   return (
     <Link to={address}>
       {circle ? (
@@ -12,9 +12,6 @@ const MusclesLink = ({ address, muscleKoreaName, circle }) => {
       )}
     </Link>
   );
-};
-MusclesLink.defaultProps = {
-  circle: false,
 };
 
 const MuscleButton = styled.button`
