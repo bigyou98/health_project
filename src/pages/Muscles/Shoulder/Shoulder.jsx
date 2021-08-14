@@ -1,10 +1,7 @@
-import {
-  ExerciseDetail,
-  ExerciseVideo,
-  Header,
-} from "components/Muscles_components";
+import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
+import { Header } from "components";
 import styled from "styled-components";
 
 export const Shoulder = () => {

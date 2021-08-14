@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { HomeFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import MusclesLink from "../../pages/Main/components/MusclesLink";
+import MusclesLink from "../pages/Main/components/MusclesLink";
 
 export const Header = () => {
   return (

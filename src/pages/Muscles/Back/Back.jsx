@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import {
-  ExerciseVideo,
-  ExerciseDetail,
-  Header,
-} from "components/Muscles_components";
+import { ExerciseVideo, ExerciseDetail } from "components/Muscles_components";
+import { Header } from "components";
+
 import styled from "styled-components";
 import exerciseData from "dummy/exerciseData";
 

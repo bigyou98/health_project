@@ -1,8 +1,5 @@
-import {
-  ExerciseDetail,
-  ExerciseVideo,
-  Header,
-} from "components/Muscles_components";
+import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
+import { Header } from "components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -10,12 +7,6 @@ import styled from "styled-components";
 export const Biceps = () => {
   const [bicepsDate, setBicepsData] = useState(exerciseData.biceps.babelCurl);
 
-  // const changeBabelCurl = () => {
-  //   setBicepsData(exerciseData.biceps.babelCurl);
-  // };
-  // const changeHammerCurl = () => {
-  //   setBicepsData(exerciseData.biceps.hammerCurl);
-  // };
   const changeContent = (type) => {
     setBicepsData(exerciseData.biceps[type]);
   };

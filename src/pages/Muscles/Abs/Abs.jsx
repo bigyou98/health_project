@@ -1,12 +1,8 @@
-import {
-  ExerciseDetail,
-  ExerciseVideo,
-  Header,
-} from "components/Muscles_components";
+import { Header } from 'components';
+import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
 import styled from "styled-components";
-
 export const Abs = () => {
   const [absData, setAbsData] = useState(exerciseData.abs.crunches);
 
