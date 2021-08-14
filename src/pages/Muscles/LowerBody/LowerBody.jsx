@@ -12,22 +12,18 @@ export const LowerBody = () => {
     exerciseData.lowerBody.squat
   );
 
-  const changeSquat = () => {
-    setLowerBodyDate(exerciseData.lowerBody.squat);
-  };
-  const changeLegCurl = () => {
-    setLowerBodyDate(exerciseData.lowerBody.legCurl);
-  };
-  const changeLegExtension = () => {
-    setLowerBodyDate(exerciseData.lowerBody.legExtension);
+  const changeContent = (type) => {
+    setLowerBodyDate(exerciseData.lower[type]);
   };
   return (
     <div>
       <Header />
       <Type>
-        <IntoType onClick={changeSquat}>스쿼트</IntoType>{" "}
-        <IntoType onClick={changeLegCurl}>레그컬</IntoType>{" "}
-        <IntoType onClick={changeLegExtension}>레그익스텐션</IntoType>{" "}
+        <IntoType onClick={() => changeContent("squat")}>스쿼트</IntoType>{" "}
+        <IntoType onClick={() => changeContent("legCurl")}>레그컬</IntoType>{" "}
+        <IntoType onClick={() => changeContent("legExtension")}>
+          레그익스텐션
+        </IntoType>{" "}
       </Type>
       <ExerciseVideo src={lowerBodyData.src} />
       <ExerciseDetail exerciseData={lowerBodyData} />

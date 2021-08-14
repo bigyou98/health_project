@@ -12,22 +12,21 @@ export const Shoulder = () => {
     exerciseData.shoulder.militaryPress
   );
 
-  const changeMilitaryPress = () => {
-    setShoulderData(exerciseData.shoulder.militaryPress);
+  const changeContent = (type) => {
+    setShoulderData(exerciseData.shoulder[type]);
   };
-  const changeSideLateralRaise = () => {
-    setShoulderData(exerciseData.shoulder.sideLateralRaise);
-  };
-  const changeBentOverLateralRaise = () => {
-    setShoulderData(exerciseData.shoulder.bentOverLateralRaise);
-  };
+
   return (
     <div>
       <Header />
       <Type>
-        <IntoType onClick={changeMilitaryPress}>밀리터리프레스</IntoType>{" "}
-        <IntoType onClick={changeSideLateralRaise}>사이드레터럴레이즈</IntoType>{" "}
-        <IntoType onClick={changeBentOverLateralRaise}>
+        <IntoType onClick={() => changeContent("militaryPress")}>
+          밀리터리프레스
+        </IntoType>{" "}
+        <IntoType onClick={() => changeContent("sideLateralRaise")}>
+          사이드레터럴레이즈
+        </IntoType>{" "}
+        <IntoType onClick={() => changeContent("bentOverLateralRaise")}>
           벤트오버레터럴레이즈
         </IntoType>{" "}
       </Type>

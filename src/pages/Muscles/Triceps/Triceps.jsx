@@ -12,18 +12,20 @@ export const Triceps = () => {
     exerciseData.triceps.cablePushDown
   );
 
-  const changeCablePushDown = () => {
-    setTricepsDate(exerciseData.triceps.cablePushDown);
+  const changeContent = (type) => {
+    setTricepsDate(exerciseData.triceps[type]);
   };
-  const changeOverHeadExtension = () => {
-    setTricepsDate(exerciseData.triceps.overHeadExtension);
-  };
+
   return (
     <div>
       <Header />
       <Type>
-        <IntoType onClick={changeCablePushDown}>케이블푸쉬다운</IntoType>{" "}
-        <IntoType onClick={changeOverHeadExtension}>오버헤드익스텐션</IntoType>{" "}
+        <IntoType onClick={() => changeContent("cablePushDown")}>
+          케이블푸쉬다운
+        </IntoType>{" "}
+        <IntoType onClick={() => changeContent("overHeadExtension")}>
+          오버헤드익스텐션
+        </IntoType>{" "}
       </Type>
       <ExerciseVideo src={tricepsData.src} />
       <ExerciseDetail exerciseData={tricepsData} />

@@ -10,18 +10,17 @@ import styled from "styled-components";
 export const Abs = () => {
   const [absData, setAbsData] = useState(exerciseData.abs.crunches);
 
-  const changeCrunches = () => {
-    setAbsData(exerciseData.abs.crunches);
-  };
-  const changeReverseCrunches = () => {
-    setAbsData(exerciseData.abs.reverseCrunches);
+  const changeContent = (type) => {
+    setAbsData(exerciseData.abs[type]);
   };
   return (
     <div>
       <Header />
       <Type>
-        <IntoType onClick={changeCrunches}>크런치</IntoType>{" "}
-        <IntoType onClick={changeReverseCrunches}>리버스크런치</IntoType>{" "}
+        <IntoType onClick={() => changeContent("crunches")}>크런치</IntoType>{" "}
+        <IntoType onClick={() => changeContent("reverseCrunches")}>
+          리버스크런치
+        </IntoType>{" "}
       </Type>
       <ExerciseVideo src={absData.src} />
       <ExerciseDetail exerciseData={absData} />

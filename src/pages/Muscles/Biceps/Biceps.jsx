@@ -10,18 +10,21 @@ import styled from "styled-components";
 export const Biceps = () => {
   const [bicepsDate, setBicepsData] = useState(exerciseData.biceps.babelCurl);
 
-  const changeBabelCurl = () => {
-    setBicepsData(exerciseData.biceps.babelCurl);
-  };
-  const changeHammerCurl = () => {
-    setBicepsData(exerciseData.biceps.hammerCurl);
+  // const changeBabelCurl = () => {
+  //   setBicepsData(exerciseData.biceps.babelCurl);
+  // };
+  // const changeHammerCurl = () => {
+  //   setBicepsData(exerciseData.biceps.hammerCurl);
+  // };
+  const changeContent = (type) => {
+    setBicepsData(exerciseData.biceps[type]);
   };
   return (
     <div>
       <Header />
       <Type>
-        <IntoType onClick={changeBabelCurl}>바벨컬</IntoType>{" "}
-        <IntoType onClick={changeHammerCurl}>해머컬</IntoType>{" "}
+        <IntoType onClick={() => changeContent("babelCurl")}>바벨컬</IntoType>{" "}
+        <IntoType onClick={() => changeContent("hammerCurl")}>해머컬</IntoType>{" "}
       </Type>
       <ExerciseVideo src={bicepsDate.src} />
       <ExerciseDetail exerciseData={bicepsDate} />
