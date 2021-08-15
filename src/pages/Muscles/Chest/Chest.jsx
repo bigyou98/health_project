@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Header } from "components";
+import { Header, Layout } from "components";
 import exerciseData from "dummy/exerciseData";
 import { ExerciseVideo, ExerciseDetail } from "components/Muscles_components";
 
@@ -11,7 +11,7 @@ export const Chest = () => {
     setChestData(exerciseData.chest[type]);
   };
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <ChestType onClick={() => changeContent("benchPress")}>
@@ -24,7 +24,7 @@ export const Chest = () => {
       </Type>
       <ExerciseVideo src={chestData.src}></ExerciseVideo>
       <ExerciseDetail exerciseData={chestData} />
-    </div>
+    </Layout>
   );
 };
 const Type = styled.div`

@@ -1,5 +1,5 @@
 import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
-import { Header } from "components";
+import { Header,Layout } from "components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -11,7 +11,7 @@ export const Biceps = () => {
     setBicepsData(exerciseData.biceps[type]);
   };
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <IntoType onClick={() => changeContent("babelCurl")}>바벨컬</IntoType>{" "}
@@ -19,7 +19,7 @@ export const Biceps = () => {
       </Type>
       <ExerciseVideo src={bicepsDate.src} />
       <ExerciseDetail exerciseData={bicepsDate} />
-    </div>
+    </Layout>
   );
 };
 const Type = styled.div`

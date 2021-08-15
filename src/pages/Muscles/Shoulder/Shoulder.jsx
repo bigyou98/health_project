@@ -1,7 +1,7 @@
 import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
-import { Header } from "components";
+import { Header,Layout } from "components";
 import styled from "styled-components";
 
 export const Shoulder = () => {
@@ -14,7 +14,7 @@ export const Shoulder = () => {
   };
 
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <IntoType onClick={() => changeContent("militaryPress")}>
@@ -29,7 +29,7 @@ export const Shoulder = () => {
       </Type>
       <ExerciseVideo src={shoulderData.src} />
       <ExerciseDetail exerciseData={shoulderData} />v
-    </div>
+    </Layout>
   );
 };
 const Type = styled.div`

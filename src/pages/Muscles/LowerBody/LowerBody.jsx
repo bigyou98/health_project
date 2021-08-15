@@ -1,7 +1,7 @@
 import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
-import { Header } from "components";
+import { Header,Layout } from "components";
 import styled from "styled-components";
 
 export const LowerBody = () => {
@@ -13,7 +13,7 @@ export const LowerBody = () => {
     setLowerBodyDate(exerciseData.lower[type]);
   };
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <IntoType onClick={() => changeContent("squat")}>스쿼트</IntoType>{" "}
@@ -24,7 +24,7 @@ export const LowerBody = () => {
       </Type>
       <ExerciseVideo src={lowerBodyData.src} />
       <ExerciseDetail exerciseData={lowerBodyData} />
-    </div>
+    </Layout>
   );
 };
 const Type = styled.div`

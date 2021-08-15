@@ -1,4 +1,4 @@
-import { Header } from 'components';
+import { Header,Layout } from 'components';
 import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
@@ -10,7 +10,7 @@ export const Abs = () => {
     setAbsData(exerciseData.abs[type]);
   };
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <IntoType onClick={() => changeContent("crunches")}>크런치</IntoType>{" "}
@@ -20,7 +20,7 @@ export const Abs = () => {
       </Type>
       <ExerciseVideo src={absData.src} />
       <ExerciseDetail exerciseData={absData} />
-    </div>
+    </Layout>
   );
 };
 

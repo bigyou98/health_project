@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ExerciseVideo, ExerciseDetail } from "components/Muscles_components";
-import { Header } from "components";
+import { Header,Layout } from "components";
 
 import styled from "styled-components";
 import exerciseData from "dummy/exerciseData";
@@ -11,7 +11,7 @@ export const Back = () => {
     setBackData(exerciseData.back[type]);
   };
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <IntoType onClick={() => changeContent("deadLift")}>
@@ -24,7 +24,7 @@ export const Back = () => {
       </Type>
       <ExerciseVideo src={backData.src} />
       <ExerciseDetail exerciseData={backData} />
-    </div>
+    </Layout>
   );
 };
 const Type = styled.div`

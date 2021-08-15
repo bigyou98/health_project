@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-
+import { TypoGrapy } from "components";
 export const ExerciseDetail = ({ exerciseData }) => {
   return (
     <Detail>
-      <Big>운동방법</Big>
+      <TypoGrapy type="h1">운동 방법</TypoGrapy>
       <ol>
         {exerciseData.exerciseMethod.map((item, index) => (
           <li key={index.toString()}>{item}</li>
         ))}
       </ol>
-      <Big2>좋은 자세</Big2>
+      <TypoGrapy type="h2">좋은 자세</TypoGrapy>
       <ul>
         {exerciseData.goodPostureContent.map((item, index) => (
           <li key={index.toString()}>{item}</li>
         ))}
       </ul>
-      <Big2>나쁜 자세</Big2>
+      <TypoGrapy type="h2">나쁜 자세</TypoGrapy>
       <ul>
         {exerciseData.badPostureContent.map((item, index) => (
           <li key={index.toString()}>{item}</li>
@@ -38,9 +38,4 @@ const Big = styled.p`
   font-size: 32px;
   font-weight: bold;
   margin-left: 8px;
-`;
-const Big2 = styled.p`
-  margin-left: 8px;
-  font-size: 24px;
-  font-weight: bold;
 `;

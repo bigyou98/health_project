@@ -1,7 +1,7 @@
 import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
-import { Header } from "components";
+import { Header, Layout } from "components";
 import styled from "styled-components";
 
 const { cablePushDown, overHeadExtension } = exerciseData.triceps;
@@ -10,7 +10,7 @@ export const Triceps = () => {
   const [tricepsData, setTricepsDate] = useState(cablePushDown);
 
   return (
-    <div>
+    <Layout>
       <Header />
       <Type>
         <IntoType onClick={() => setTricepsDate(cablePushDown)}>
@@ -22,7 +22,7 @@ export const Triceps = () => {
       </Type>
       <ExerciseVideo src={tricepsData.src} />
       <ExerciseDetail exerciseData={tricepsData} />
-    </div>
+    </Layout>
   );
 };
 const Type = styled.div`

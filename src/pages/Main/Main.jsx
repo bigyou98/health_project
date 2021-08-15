@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import MuscleLink from "./components/MusclesLink";
-
+import { TypoGrapy } from "components";
+import background from "images/background.jpg";
 const Main = () => {
   return (
     <Wrapper>
-      <h1>부위별 운동 방법</h1>
+      <TypoGrapy type="h1">부위별 운동방법</TypoGrapy>
       <ButtonBox>
         <MuscleLink address="/muscles/chest" muscleKoreaName="가슴" circle />{" "}
         <MuscleLink address="/muscles/back" muscleKoreaName="등" circle />
@@ -25,6 +26,10 @@ const Main = () => {
   );
 };
 const Wrapper = styled.div`
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
