@@ -1,42 +1,30 @@
-import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
+import {
+  ExerciseDetail,
+  ExerciseVideo,
+  ExerciseType,
+} from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
-import { Header,Layout } from "components";
-import styled from "styled-components";
+import { Header, Layout } from "components";
 
+const [squat] = exerciseData.lowerBody;
 export const LowerBody = () => {
-  const [lowerBodyData, setLowerBodyDate] = useState(
-    exerciseData.lowerBody.squat
-  );
+  const [lowerBodyData, setLowerBodyDate] = useState(squat);
 
   const changeContent = (type) => {
-    setLowerBodyDate(exerciseData.lower[type]);
+    setLowerBodyDate(
+      exerciseData.lowerBody.find((data) => data.eName === type)
+    );
   };
   return (
     <Layout>
       <Header />
-      <Type>
-        <IntoType onClick={() => changeContent("squat")}>스쿼트</IntoType>{" "}
-        <IntoType onClick={() => changeContent("legCurl")}>레그컬</IntoType>{" "}
-        <IntoType onClick={() => changeContent("legExtension")}>
-          레그익스텐션
-        </IntoType>{" "}
-      </Type>
+      <ExerciseType
+        exerciseType={exerciseData.lowerBody}
+        changeContent={changeContent}
+      />
       <ExerciseVideo src={lowerBodyData.src} />
       <ExerciseDetail exerciseData={lowerBodyData} />
     </Layout>
   );
 };
-const Type = styled.div`
-  user-select: none;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px 0px;
-  margin: 0 30px;
-`;
-const IntoType = styled.span`
-  &:hover {
-    color: red;
-    cursor: pointer;
-  }
-`;

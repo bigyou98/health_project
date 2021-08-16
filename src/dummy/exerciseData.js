@@ -1,7 +1,8 @@
 const exerciseData = {
-  chest: {
-    benchPress: {
+  chest: [
+    {
       name: "벤치프레스",
+      eName: "benchPress",
       src: "https://www.youtube.com/embed/Et2yw2b5D4k",
       exerciseMethod: [
         "등이 최대한 젖혀지게 벤치에 눕는다",
@@ -30,8 +31,9 @@ const exerciseData = {
         "등이 둥글게 말린 경우",
       ],
     },
-    chestPress: {
-      name: "체스트 프레스",
+    {
+      name: "체스트프레스",
+      eName: "chestPress",
       src: "https://www.youtube.com/embed/1pBcQ-77ho4",
       exerciseMethod: [
         "자신의 몸에 맞게 적당한 중량과 의자 높이를 조정하고 기구에 앉는다.",
@@ -50,8 +52,9 @@ const exerciseData = {
         "어깨가 올라가는 경우",
       ],
     },
-    ply: {
+    {
       name: "플라이",
+      eName: "ply",
       src: "https://www.youtube.com/embed/HcDzxNNrSBo",
       exerciseMethod: [
         "벤치에 눕는다.",
@@ -70,10 +73,11 @@ const exerciseData = {
         "누울 때 등을 벤치에 다 댄 경우",
       ],
     },
-  },
-  back: {
-    deadLift: {
+  ],
+  back: [
+    {
       name: "데드리프트",
+      eName: "deadLift",
       src: "https://www.youtube.com/embed/XwybtFgfSRU",
       exerciseMethod: [
         "발의 위치는 골반너비로 발을 살짝 바깥으로 벌려준다.",
@@ -95,8 +99,9 @@ const exerciseData = {
         "바벨을 들 때 허리가 굽어진 경우",
       ],
     },
-    latPullDown: {
+    {
       name: "랫풀다운",
+      eName: "latPullDown",
       src: "https://www.youtube.com/embed/G11ySWVXA48",
       exerciseMethod: [
         "가슴을 내밀면서 숄더팩킹을 한다.",
@@ -116,8 +121,9 @@ const exerciseData = {
         "엉덩이가 들리는 경우",
       ],
     },
-    pullUp: {
-      name: "풀 업",
+    {
+      name: "풀업",
+      eName: "pullUp",
       src: "https://www.youtube.com/embed/cp6zC0Z9Vt8",
       exerciseMethod: [
         "바를 잡으며 가슴을 내밀면서 날개뼈를 뒤로 접는다.",
@@ -138,10 +144,11 @@ const exerciseData = {
         "내려온 후 힘을 다 빼버리는 경우",
       ],
     },
-  },
-  shoulder: {
-    militaryPress: {
-      name: "밀리터리 프레스",
+  ],
+  shoulder: [
+    {
+      name: "밀리터리프레스",
+      eName: "militaryPress",
       src: "https://www.youtube.com/embed/8DByXGrk4Ps",
       exerciseMethod: [
         "어깨보다 약간 넓은 그립으로 잡는다.",
@@ -162,8 +169,9 @@ const exerciseData = {
         "수축과 이완시 팔꿈치가 옆으로 빠지는 경우",
       ],
     },
-    sideLateralRaise: {
-      name: "사이드 레터럴 레이즈",
+    {
+      name: "사이드레터럴레이즈",
+      eName: "sideLateralRaise",
       src: "https://www.youtube.com/embed/dE5be4sTjxM",
       exerciseMethod: [
         "어깨충돌을 방지하기 위해 상체를 약간 앞으로 숙인다.",
@@ -181,8 +189,9 @@ const exerciseData = {
         "상체가 일자로 서있는 경우",
       ],
     },
-    bentOverLateralRaise: {
-      name: "벤트 오버 레터럴 레이즈",
+    {
+      name: "벤트오버레터럴레이즈",
+      eName: "bentOverLateralRaise",
       src: "https://www.youtube.com/embed/ApN4D31ogVg",
       exerciseMethod: [
         "복부에 힘을 주고 등을 핀 후 허리를 90도로 굽힌다.",
@@ -200,10 +209,11 @@ const exerciseData = {
         "팔꿈치를 쫙 핀 경우",
       ],
     },
-  },
-  lowerBody: {
-    squat: {
+  ],
+  lowerBody: [
+    {
       name: "스쿼트",
+      eName: "squat",
       src: "https://www.youtube.com/embed/2hzbpTBA6vE",
       exerciseMethod: [
         "가슴을 펴고 등을 견고하게 한 후 바벨의 밑으로 들어간다",
@@ -235,8 +245,9 @@ const exerciseData = {
         "발의 모양이 11자인 경우",
       ],
     },
-    legExtension: {
-      name: "레그 익스텐션",
+    {
+      name: "레그익스텐션",
+      eName: "legExtension",
       src: "https://www.youtube.com/embed/BsNxEFKNLvY",
       exerciseMethod: [
         "상체를 고정한다.",
@@ -251,8 +262,9 @@ const exerciseData = {
       ],
       badPostureContent: ["발가락을 몸바깥으로 쫙 핀 경우", "기구를 차는 자세"],
     },
-    legCurl: {
-      name: "레그 컬",
+    {
+      name: "레그컬",
+      eName: "legCurl",
       src: "https://www.youtube.com/embed/DZehXLrA8A0",
       exerciseMethod: [
         "무릎 바로 위에 패드를 견착한다.",
@@ -265,10 +277,12 @@ const exerciseData = {
         "허벅지까지 당기지 않는 경우",
       ],
     },
-  },
-  triceps: {
-    cablePushDown: {
-      name: "케이블 푸쉬 다운",
+  ],
+
+  triceps: [
+    {
+      name: "케이블푸쉬다운",
+      eName: "cablePushDown",
       src: "https://www.youtube.com/embed/cF9NczPANp4",
       exerciseMethod: [
         "어깨를 고정하고 기구를 잡는다.",
@@ -289,8 +303,9 @@ const exerciseData = {
         "승모근을 사용하여 밑으로 내리는 경우",
       ],
     },
-    overHeadExtension: {
-      name: "오버헤드 익스텐션",
+    {
+      name: "오버헤드익스텐션",
+      eName: "overHeadExtension",
       src: "https://www.youtube.com/embed/S16elxfEYT8",
       exerciseMethod: [
         "덤벨을 들어 팔꿈치를 고정시킨다.",
@@ -303,10 +318,11 @@ const exerciseData = {
         "팔꿈치를 억지로 붙여버리면 팔꿈치가 상한다.",
       ],
     },
-  },
-  biceps: {
-    babelCurl: {
-      name: "바벨 컬",
+  ],
+  biceps: [
+    {
+      name: "바벨컬",
+      eName: "babelCurl",
       src: "https://www.youtube.com/embed/A3AWaC2uKnU",
       exerciseMethod: [
         "어깨관절은 고정시킨다.",
@@ -324,8 +340,9 @@ const exerciseData = {
         "내릴 때 힘을 풀어버리는 경우",
       ],
     },
-    hammerCurl: {
-      name: "해머 컬",
+    {
+      name: "해머컬",
+      eName: "hammerCurl",
       src: "https://www.youtube.com/embed/Ge3_S7lRvfQ",
       exerciseMethod: [
         "어깨관절은 고정시킨다.",
@@ -344,10 +361,11 @@ const exerciseData = {
         "내릴 때 힘을 풀어버리는 경우",
       ],
     },
-  },
-  abs: {
-    crunches: {
+  ],
+  abs: [
+    {
       name: "크런치",
+      eName: "crunches",
       src: "https://www.youtube.com/embed/KqnFav4Edvw",
       exerciseMethod: [
         "매트나 바닥에 무릎을 세워서 누워준다.",
@@ -363,8 +381,9 @@ const exerciseData = {
         "허리가 바닥에서 떨어지는 경우",
       ],
     },
-    reverseCrunches: {
-      name: "리버스 크런치",
+    {
+      name: "리버스크런치",
+      eName: "reverseCrunches",
       src: "https://www.youtube.com/embed/gGHkMSIjM4g",
       exerciseMethod: [
         "바닥에 등을 붙이고 눕는다.",
@@ -383,7 +402,7 @@ const exerciseData = {
         "과도한 힘으로 격하게 하는 경우",
       ],
     },
-  },
+  ],
 };
 
 export default exerciseData;

@@ -5,7 +5,8 @@ export const TypoGrapy = ({ children, type }) => {
   return <Font isStyle={type}>{children}</Font>;
 };
 
-const Font = styled.p`
+// p로 하니까 영역으로 되서 span으로 바꿈
+const Font = styled.span`
   margin-left: 8px;
   ${(props) =>
     props.isStyle === "h1" &&

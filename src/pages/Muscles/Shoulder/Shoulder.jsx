@@ -1,47 +1,29 @@
-import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
+import {
+  ExerciseDetail,
+  ExerciseVideo,
+  ExerciseType,
+} from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
-import { Header,Layout } from "components";
-import styled from "styled-components";
+import { Header, Layout } from "components";
 
+const [militaryPress] = exerciseData.shoulder;
 export const Shoulder = () => {
-  const [shoulderData, setShoulderData] = useState(
-    exerciseData.shoulder.militaryPress
-  );
+  const [shoulderData, setShoulderData] = useState(militaryPress);
 
   const changeContent = (type) => {
-    setShoulderData(exerciseData.shoulder[type]);
+    setShoulderData(exerciseData.triceps.find((data) => data.eName === type));
   };
 
   return (
     <Layout>
       <Header />
-      <Type>
-        <IntoType onClick={() => changeContent("militaryPress")}>
-          밀리터리프레스
-        </IntoType>{" "}
-        <IntoType onClick={() => changeContent("sideLateralRaise")}>
-          사이드레터럴레이즈
-        </IntoType>{" "}
-        <IntoType onClick={() => changeContent("bentOverLateralRaise")}>
-          벤트오버레터럴레이즈
-        </IntoType>{" "}
-      </Type>
+      <ExerciseType
+        exerciseType={exerciseData.shoulder}
+        changeContent={changeContent}
+      />
       <ExerciseVideo src={shoulderData.src} />
       <ExerciseDetail exerciseData={shoulderData} />v
     </Layout>
   );
 };
-const Type = styled.div`
-  user-select: none;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px 0px;
-  margin: 0 30px;
-`;
-const IntoType = styled.span`
-  &:hover {
-    color: red;
-    cursor: pointer;
-  }
-`;

@@ -1,42 +1,28 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Header, Layout } from "components";
 import exerciseData from "dummy/exerciseData";
-import { ExerciseVideo, ExerciseDetail } from "components/Muscles_components";
+import {
+  ExerciseVideo,
+  ExerciseDetail,
+  ExerciseType,
+} from "components/Muscles_components";
 
+const [benchPress] = exerciseData.chest;
 export const Chest = () => {
-  const [chestData, setChestData] = useState(exerciseData.chest.benchPress);
+  const [chestData, setChestData] = useState(benchPress);
 
   const changeContent = (type) => {
-    setChestData(exerciseData.chest[type]);
+    setChestData(exerciseData.chest.find((data) => data.eName === type));
   };
   return (
     <Layout>
       <Header />
-      <Type>
-        <ChestType onClick={() => changeContent("benchPress")}>
-          벤치프레스
-        </ChestType>{" "}
-        <ChestType onClick={() => changeContent("chestPress")}>
-          체스트프레스
-        </ChestType>{" "}
-        <ChestType onClick={() => changeContent("ply")}>플라이</ChestType>
-      </Type>
+      <ExerciseType
+        exerciseType={exerciseData.chest}
+        changeContent={changeContent}
+      />
       <ExerciseVideo src={chestData.src}></ExerciseVideo>
       <ExerciseDetail exerciseData={chestData} />
     </Layout>
   );
 };
-const Type = styled.div`
-  user-select: none;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px 0px;
-  margin: 0 30px;
-`;
-const ChestType = styled.span`
-  &:hover {
-    color: red;
-    cursor: pointer;
-  }
-`;

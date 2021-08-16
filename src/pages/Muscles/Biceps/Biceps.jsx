@@ -1,37 +1,29 @@
-import { ExerciseDetail, ExerciseVideo } from "components/Muscles_components";
-import { Header,Layout } from "components";
+import {
+  ExerciseDetail,
+  ExerciseVideo,
+  ExerciseType,
+} from "components/Muscles_components";
+import { Header, Layout } from "components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
-import styled from "styled-components";
+
+const [babelCurl] = exerciseData.biceps;
 
 export const Biceps = () => {
-  const [bicepsDate, setBicepsData] = useState(exerciseData.biceps.babelCurl);
+  const [bicepsDate, setBicepsData] = useState(babelCurl);
 
   const changeContent = (type) => {
-    setBicepsData(exerciseData.biceps[type]);
+    setBicepsData(exerciseData.biceps.find((data) => data.eName === type));
   };
   return (
     <Layout>
       <Header />
-      <Type>
-        <IntoType onClick={() => changeContent("babelCurl")}>바벨컬</IntoType>{" "}
-        <IntoType onClick={() => changeContent("hammerCurl")}>해머컬</IntoType>{" "}
-      </Type>
+      <ExerciseType
+        exerciseType={exerciseData.biceps}
+        changeContent={changeContent}
+      />
       <ExerciseVideo src={bicepsDate.src} />
       <ExerciseDetail exerciseData={bicepsDate} />
     </Layout>
   );
 };
-const Type = styled.div`
-  user-select: none;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px 0px;
-  margin: 0 30px;
-`;
-const IntoType = styled.span`
-  &:hover {
-    color: red;
-    cursor: pointer;
-  }
-`;
