@@ -6,6 +6,7 @@ import {
   ExerciseDetail,
   ExerciseType,
 } from "components/Muscles_components";
+import styled from "styled-components";
 
 const [benchPress] = exerciseData.chest;
 export const Chest = () => {
@@ -21,8 +22,14 @@ export const Chest = () => {
         exerciseType={exerciseData.chest}
         changeContent={changeContent}
       />
-      <ExerciseVideo src={chestData.src}></ExerciseVideo>
-      <ExerciseDetail exerciseData={chestData} />
+      <ContentBox>
+        <ExerciseVideo src={chestData.src}></ExerciseVideo>
+        <ExerciseDetail exerciseData={chestData} />
+      </ContentBox>
     </Layout>
   );
 };
+
+const ContentBox = styled.div`
+  display: flex;
+`;

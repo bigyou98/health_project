@@ -6,6 +6,7 @@ import {
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
 import { Header, Layout } from "components";
+import styled from "styled-components";
 
 const [squat] = exerciseData.lowerBody;
 export const LowerBody = () => {
@@ -23,8 +24,13 @@ export const LowerBody = () => {
         exerciseType={exerciseData.lowerBody}
         changeContent={changeContent}
       />
-      <ExerciseVideo src={lowerBodyData.src} />
-      <ExerciseDetail exerciseData={lowerBodyData} />
+      <ContentBox>
+        <ExerciseVideo src={lowerBodyData.src} />
+        <ExerciseDetail exerciseData={lowerBodyData} />
+      </ContentBox>
     </Layout>
   );
 };
+const ContentBox = styled.div`
+  display: flex;
+`;

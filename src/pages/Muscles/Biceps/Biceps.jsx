@@ -6,6 +6,7 @@ import {
 import { Header, Layout } from "components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
+import styled from "styled-components";
 
 const [babelCurl] = exerciseData.biceps;
 
@@ -22,8 +23,13 @@ export const Biceps = () => {
         exerciseType={exerciseData.biceps}
         changeContent={changeContent}
       />
-      <ExerciseVideo src={bicepsDate.src} />
-      <ExerciseDetail exerciseData={bicepsDate} />
+      <ContentBox>
+        <ExerciseVideo src={bicepsDate.src} />
+        <ExerciseDetail exerciseData={bicepsDate} />
+      </ContentBox>
     </Layout>
   );
 };
+const ContentBox = styled.div`
+  display: flex;
+`;

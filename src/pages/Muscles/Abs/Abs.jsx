@@ -6,6 +6,7 @@ import {
 } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
+import styled from "styled-components";
 
 const [aaa] = exerciseData.abs;
 export const Abs = () => {
@@ -21,8 +22,13 @@ export const Abs = () => {
         exerciseType={exerciseData.abs}
         changeContent={changeContent}
       />
-      <ExerciseVideo src={absData.src} />
-      <ExerciseDetail exerciseData={absData} />
+      <ContentBox>
+        <ExerciseVideo src={absData.src} />
+        <ExerciseDetail exerciseData={absData} />
+      </ContentBox>
     </Layout>
   );
 };
+const ContentBox = styled.div`
+  display: flex;
+`;

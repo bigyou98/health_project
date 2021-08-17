@@ -6,6 +6,7 @@ import {
 import exerciseData from "dummy/exerciseData";
 import React, { useState } from "react";
 import { Header, Layout } from "components";
+import styled from "styled-components";
 
 // 배열 비구조화
 const [cablePushDown] = exerciseData.triceps;
@@ -24,8 +25,13 @@ export const Triceps = () => {
         exerciseType={exerciseData.triceps}
         changeContent={changeContent}
       />
-      <ExerciseVideo src={tricepsData.src} />
-      <ExerciseDetail exerciseData={tricepsData} />
+      <ContentBox>
+        <ExerciseVideo src={tricepsData.src} />
+        <ExerciseDetail exerciseData={tricepsData} />
+      </ContentBox>
     </Layout>
   );
 };
+const ContentBox = styled.div`
+  display: flex;
+`;

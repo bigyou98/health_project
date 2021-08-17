@@ -6,6 +6,7 @@ import {
 } from "components/Muscles_components";
 import { Header, Layout } from "components";
 import exerciseData from "dummy/exerciseData";
+import styled from "styled-components";
 
 const [deadLift] = exerciseData.back;
 export const Back = () => {
@@ -20,8 +21,13 @@ export const Back = () => {
         exerciseType={exerciseData.back}
         changeContent={changeContent}
       />
-      <ExerciseVideo src={backData.src} />
-      <ExerciseDetail exerciseData={backData} />
+      <ContentBox>
+        <ExerciseVideo src={backData.src} />
+        <ExerciseDetail exerciseData={backData} />
+      </ContentBox>
     </Layout>
   );
 };
+const ContentBox = styled.div`
+  display: flex;
+`;
