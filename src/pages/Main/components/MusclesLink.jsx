@@ -4,17 +4,18 @@ import styled from "styled-components";
 
 const MusclesLink = ({ address, muscleKoreaName, circle = false }) => {
   return (
-    <Link to={address}>
+    <StyledLink to={address}>
       {circle ? (
         <MuscleButton>{muscleKoreaName}</MuscleButton>
       ) : (
         <MuscleNameButton>{muscleKoreaName}</MuscleNameButton>
       )}
-    </Link>
+    </StyledLink>
   );
 };
 
 const MuscleButton = styled.button`
+  user-select: none;
   width: 250px;
   height: 250px;
   margin: 50px;
@@ -28,20 +29,21 @@ const MuscleButton = styled.button`
 const MuscleNameButton = styled.p`
   transition: transform, 500ms ease-in-out;
   user-select: none;
-  // black로 지정안하면 보라색임 : visited 라는 뜻인거같음
   color: black;
   &:hover {
     transform: scale(1.2);
-    text-decoration: none; // 적용 안됨
+    text-decoration: none !important; // 적용 안됨
+    color: white;
   }
-  // 밑에것들 적용 안됨
-  /* &:link {
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  &:link {
     color: blue;
-    text-decoration: none;
   }
   &:visited {
     color: green;
-    text-decoration: none;
-  } */
+  }
 `;
+
 export default MusclesLink;

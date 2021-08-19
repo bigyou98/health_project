@@ -43,6 +43,10 @@ const HomeLogo = styled.button`
   border: none;
   margin-left: 30px;
   cursor: pointer;
+  transition: transform, 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 const MuscleList = styled.div`
