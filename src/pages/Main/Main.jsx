@@ -4,7 +4,6 @@ import MuscleLink from "./components/MusclesLink";
 import { TypoGrapy } from "components";
 import background from "images/background.jpg";
 
-
 const Main = () => {
   return (
     <Wrapper>
@@ -28,7 +27,13 @@ const Main = () => {
   );
 };
 const Wrapper = styled.div`
-  background-image: url(${background});
+  /* background-image: url(${background}); */
+  background: rgb(1, 1, 1);
+  background: radial-gradient(
+    circle,
+    rgba(1, 1, 1, 1) 0%,
+    rgba(221, 221, 221, 1) 100%
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;

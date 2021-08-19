@@ -20,9 +20,20 @@ const MuscleButton = styled.button`
   height: 250px;
   margin: 50px;
   border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
   transition: transform, 500ms ease-in-out;
+  border: 1px solid black;
+  background: gray;
   &:hover {
     transform: scale(1.2);
+    border: 3px solid black;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 `;
 
