@@ -43,7 +43,7 @@ const MuscleNameButton = styled.p`
   color: black;
   &:hover {
     transform: scale(1.2);
-    text-decoration: none !important; // 적용 안됨 푸쉬하기
+    text-decoration: none !important; // 소스트리 오류
     color: white;
   }
 `;
