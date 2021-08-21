@@ -1,5 +1,5 @@
 import React from "react";
-import { TypoGrapy } from "components";
+import { TypoGraphy } from "components";
 import styled from "styled-components";
 
 export const ExerciseType = ({ exerciseType, changeContent }) => {
@@ -7,7 +7,7 @@ export const ExerciseType = ({ exerciseType, changeContent }) => {
     <Type>
       {exerciseType.map(({ name, eName }) => (
         <IntoType onClick={() => changeContent(eName)}>
-          <TypoGrapy type="h2">{name}</TypoGrapy>
+          <TypoGraphy type="h2">{name}</TypoGraphy>
         </IntoType>
       ))}
     </Type>
