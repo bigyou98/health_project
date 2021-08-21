@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const TypoGrapy = ({ children, type }) => {
+export const TypoGraphy = ({ children, type }) => {
   return <Font isStyle={type}>{children}</Font>;
 };
 

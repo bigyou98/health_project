@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { TypoGrapy } from "components";
+import { TypoGraphy } from "components";
 export const ExerciseDetail = ({ exerciseData }) => {
   return (
     <Detail>
-      <TypoGrapy type="h1">운동 방법</TypoGrapy>
+      <TypoGraphy type="h1">운동 방법</TypoGraphy>
       <ol>
         {exerciseData.exerciseMethod.map((item, index) => (
           <li key={index.toString()}>{item}</li>
         ))}
       </ol>
-      <TypoGrapy type="h2">좋은 자세</TypoGrapy>
+      <TypoGraphy type="h2">좋은 자세</TypoGraphy>
       <ul>
         {exerciseData.goodPostureContent.map((item, index) => (
           <li key={index.toString()}>{item}</li>
         ))}
       </ul>
-      <TypoGrapy type="h2">나쁜 자세</TypoGrapy>
+      <TypoGraphy type="h2">나쁜 자세</TypoGraphy>
       <ul>
         {exerciseData.badPostureContent.map((item, index) => (
           <li key={index.toString()}>{item}</li>
