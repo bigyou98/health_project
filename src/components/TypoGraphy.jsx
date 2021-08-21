@@ -1,22 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 
-export const TypoGraphy = ({ children, type }) => {
-  return <Font isStyle={type}>{children}</Font>;
+export const TypoGraphy = ({ children, type, weight }) => {
+  const switchType = () => {
+    switch (type) {
+      case "h1":
+        return "32px";
+      case "h2":
+        return "24px";
+      default:
+        return "16px";
+    }
+  };
+  const switchWeight = () => {
+    switch (weight) {
+      case "bold":
+        return "bold";
+      default:
+        return "normal";
+    }
+  };
+  return (
+    <Font size={switchType(type)} fontWeight={switchWeight(weight)}>
+      {children}
+    </Font>
+  );
 };
 
-// p로 하니까 영역으로 되서 span으로 바꿈
-const Font = styled.span`
+const Font = styled.p`
   margin-left: 8px;
   user-select: none;
-  ${(props) =>
-    props.isStyle === "h1" &&
-    `
-    font-size: 32px;
-    font-weight: bold;
-  `}
-  ${(props) =>
-    props.isStyle === "h2" &&
-    `font-size: 24px;
-    font-weight: bold; `}
+  font-size: ${(props) => props.size};
+  font-weight: ${(props) => props.fontWeight};
 `;

@@ -43,7 +43,7 @@ const MuscleNameButton = styled.p`
   color: black;
   &:hover {
     transform: scale(1.2);
-    text-decoration: none !important; // 소스트리 오류3
+    text-decoration: none;
     color: white;
   }
 `;

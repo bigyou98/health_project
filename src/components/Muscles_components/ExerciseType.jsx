@@ -7,7 +7,9 @@ export const ExerciseType = ({ exerciseType, changeContent }) => {
     <Type>
       {exerciseType.map(({ name, eName }) => (
         <IntoType onClick={() => changeContent(eName)}>
-          <TypoGraphy type="h2">{name}</TypoGraphy>
+          <TypoGraphy type="h2" weight="bold">
+            {name}
+          </TypoGraphy>
         </IntoType>
       ))}
     </Type>
@@ -15,6 +17,7 @@ export const ExerciseType = ({ exerciseType, changeContent }) => {
 };
 
 const Type = styled.div`
+  display: flex;
   user-select: none;
   font-size: 24px;
   font-weight: bold;

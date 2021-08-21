@@ -7,7 +7,9 @@ import background from "images/background.jpg";
 const Main = () => {
   return (
     <Wrapper>
-      <TypoGraphy type="h1">부위별 운동방법</TypoGraphy>
+      <TypoGraphy type="h1" weight="bold">
+        부위별 운동방법
+      </TypoGraphy>
       <ButtonBox>
         <MuscleLink address="/muscles/chest" muscleKoreaName="가슴" circle />
         <MuscleLink address="/muscles/back" muscleKoreaName="등" circle />
