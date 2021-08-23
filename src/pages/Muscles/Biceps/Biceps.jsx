@@ -5,7 +5,7 @@ import {
 } from "components/Muscles_components";
 import { Header, Layout } from "components";
 import exerciseData from "dummy/exerciseData";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 
 const [babelCurl] = exerciseData.biceps;
@@ -13,9 +13,12 @@ const [babelCurl] = exerciseData.biceps;
 export const Biceps = () => {
   const [bicepsDate, setBicepsData] = useState(babelCurl);
 
-  const changeContent = (type) => {
-    setBicepsData(exerciseData.biceps.find((data) => data.eName === type));
-  };
+  const changeContent = useCallback(
+    (type) => {
+      setBicepsData(exerciseData.biceps.find((data) => data.eName === type));
+    },
+    []
+  );
   return (
     <Layout>
       <Header />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import {
   ExerciseVideo,
   ExerciseDetail,
@@ -11,9 +11,12 @@ import styled from "styled-components";
 const [deadLift] = exerciseData.back;
 export const Back = () => {
   const [backData, setBackData] = useState(deadLift);
-  const changeContent = (type) => {
-    setBackData(exerciseData.back.find((data) => data.eName === type));
-  };
+  const changeContent = useCallback(
+    (type) => {
+      setBackData(exerciseData.back.find((data) => data.eName === type));
+    },
+    []
+  );
   return (
     <Layout>
       <Header />

@@ -5,16 +5,21 @@ import {
   ExerciseType,
 } from "components/Muscles_components";
 import exerciseData from "dummy/exerciseData";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 
-const [aaa] = exerciseData.abs;
+const [crunches] = exerciseData.abs;
 export const Abs = () => {
-  const [absData, setAbsData] = useState(aaa);
+  const [absData, setAbsData] = useState(crunches);
 
-  const changeContent = (type) => {
-    setAbsData(exerciseData.abs.find((data) => data.eName === type));
-  };
+  const changeContent = useCallback(
+    (type) => {
+      setAbsData(exerciseData.abs.find((data) => data.eName === type));
+    },
+    []
+  );
+
+  // Header, ExerciseType가 변경되면 안됨
   return (
     <Layout>
       <Header />
