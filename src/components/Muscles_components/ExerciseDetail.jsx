@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TypoGraphy } from "components";
-export const ExerciseDetail = ({ exerciseData }) => {
+export const ExerciseDetail = React.memo(({ exerciseData }) => {
   return (
     <Detail>
       <TypoGraphy type="h1" weight="bold">
@@ -30,7 +30,7 @@ export const ExerciseDetail = ({ exerciseData }) => {
       </ul>
     </Detail>
   );
-};
+});
 const Detail = styled.div`
   float: right;
   border: 1px solid black;

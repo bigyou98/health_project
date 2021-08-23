@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ExerciseVideo = ({ src }) => {
+export const ExerciseVideo = React.memo(({ src }) => {
   return <Video src={src} />;
-};
+});
 
 const Video = styled.iframe`
   margin: 30px 30px;
