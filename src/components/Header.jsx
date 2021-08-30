@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { HomeFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import MusclesLink from "../pages/Main/components/MusclesLink";
+import { customColors } from "constants/index";
 
 export const Header = () => {
   return (
@@ -33,7 +34,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 48px;
-  background: gray;
+  background-color: ${customColors.mainColor};
   color: white;
 `;
 const HomeLogo = styled.button`

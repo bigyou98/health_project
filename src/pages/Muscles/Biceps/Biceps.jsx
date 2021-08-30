@@ -13,12 +13,9 @@ const [babelCurl] = exerciseData.biceps;
 export const Biceps = () => {
   const [bicepsDate, setBicepsData] = useState(babelCurl);
 
-  const changeContent = useCallback(
-    (type) => {
-      setBicepsData(exerciseData.biceps.find((data) => data.eName === type));
-    },
-    []
-  );
+  const changeContent = useCallback((type) => {
+    setBicepsData(exerciseData.biceps.find((data) => data.eName === type));
+  }, []);
   return (
     <Layout>
       <Header />

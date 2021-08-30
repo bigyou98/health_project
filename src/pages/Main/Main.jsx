@@ -3,12 +3,13 @@ import styled from "styled-components";
 import MuscleLink from "./components/MusclesLink";
 import { TypoGraphy } from "components";
 import background from "images/background.jpg";
+import { customColors } from "constants/index";
 
 const Main = () => {
   return (
     <Wrapper>
       <TypoGraphy type="h1" weight="bold">
-        부위별 운동방법
+        How to Health
       </TypoGraphy>
       <ButtonBox>
         <MuscleLink address="/muscles/chest" muscleKoreaName="가슴" circle />
@@ -30,12 +31,8 @@ const Main = () => {
 };
 const Wrapper = styled.div`
   /* background-image: url(${background}); */
-  background: rgb(1, 1, 1);
-  background: radial-gradient(
-    circle,
-    rgba(1, 1, 1, 1) 0%,
-    rgba(221, 221, 221, 1) 100%
-  );
+  // 고칠거야
+  background-color: ${customColors.mainColor};
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;

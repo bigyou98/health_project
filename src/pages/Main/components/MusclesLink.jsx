@@ -19,12 +19,12 @@ const MuscleButton = styled.button`
   width: 250px;
   height: 250px;
   margin: 50px;
-  border-radius: 50%;
+  border-radius: 50px;
   font-size: 20px;
   font-weight: bold;
-  transition: transform, 500ms ease-in-out;
+  transition: transform, 1000ms ease-in-out;
   border: 1px solid black;
-  background: gray;
+  background: white;
   &:hover {
     transform: scale(1.2);
     border: 3px solid black;
