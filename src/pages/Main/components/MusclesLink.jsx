@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { customColors } from "constants/index";
 
 const MusclesLink = ({ address, muscleKoreaName, circle = false }) => {
   return (
@@ -23,16 +24,14 @@ const MuscleButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   transition: transform, 1000ms ease-in-out;
-  border: 1px solid black;
-  background: white;
+  background: ${customColors.btn};
   &:hover {
     transform: scale(1.2);
-    border: 3px solid black;
-    background: rgb(255, 255, 255);
+    background: rgb(67, 195, 226);
     background: radial-gradient(
       circle,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
+      rgba(67, 195, 226, 1) 41%,
+      rgba(6, 80, 196, 1) 95%
     );
   }
 `;

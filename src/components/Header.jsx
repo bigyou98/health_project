@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 48px;
-  background-color: ${customColors.mainColor};
+  background-color: ${customColors.dark};
   color: white;
 `;
 const HomeLogo = styled.button`

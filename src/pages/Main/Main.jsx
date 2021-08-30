@@ -30,9 +30,7 @@ const Main = () => {
   );
 };
 const Wrapper = styled.div`
-  /* background-image: url(${background}); */
-  // 고칠거야
-  background-color: ${customColors.mainColor};
+  background-color: ${customColors.dark};
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;

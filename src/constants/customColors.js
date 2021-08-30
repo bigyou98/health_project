@@ -1,4 +1,6 @@
 export const customColors = {
-  mainColor: "#1e88e5",
-  subColor: "#69b6ff",
+  primary: "#1e88e5",
+  light: "#69b6ff",
+  dark: "#005bb2",
+  btn: "#ffffff",
 };
