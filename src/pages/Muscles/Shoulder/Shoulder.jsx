@@ -12,12 +12,9 @@ const [militaryPress] = exerciseData.shoulder;
 export const Shoulder = () => {
   const [shoulderData, setShoulderData] = useState(militaryPress);
 
-  const changeContent = useCallback(
-    (type) => {
-      setShoulderData(exerciseData.triceps.find((data) => data.eName === type));
-    },
-    []
-  );
+  const changeContent = useCallback((type) => {
+    setShoulderData(exerciseData.triceps.find((data) => data.eName === type));
+  }, []);
 
   return (
     <Layout>
@@ -28,7 +25,7 @@ export const Shoulder = () => {
       />
       <ContentBox>
         <ExerciseVideo src={shoulderData.src} />
-        <ExerciseDetail exerciseData={shoulderData} />v
+        <ExerciseDetail exerciseData={shoulderData} />
       </ContentBox>
     </Layout>
   );

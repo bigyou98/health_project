@@ -1,6 +1,7 @@
 import React from "react";
 import { TypoGraphy } from "components";
 import styled from "styled-components";
+import { customColors } from "constants/index";
 
 export const ExerciseType = ({ exerciseType, changeContent }) => {
   return (
@@ -27,7 +28,7 @@ const Type = styled.div`
 
 const IntoType = styled.span`
   &:hover {
-    color: red;
+    color: ${customColors.yellow};
     cursor: pointer;
   }
 `;

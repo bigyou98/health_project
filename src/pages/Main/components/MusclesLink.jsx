@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { customColors } from "constants/index";
+import "animate.css";
 
 const MusclesLink = ({ address, muscleKoreaName, circle = false }) => {
   return (
@@ -23,10 +24,10 @@ const MuscleButton = styled.button`
   border-radius: 50px;
   font-size: 20px;
   font-weight: bold;
-  transition: transform, 1000ms ease-in-out;
   &:hover {
-    transform: scale(1.2);
-    color: yellow;
+    animation: swing;
+    animation-duration: 1s;
+    color: ${customColors.yellow};
     font-weight: bold;
     background: rgb(67, 195, 226);
     background: radial-gradient(

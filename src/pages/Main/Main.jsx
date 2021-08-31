@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import MuscleLink from "./components/MusclesLink";
 import { TypoGraphy } from "components";
-import background from "images/background.jpg";
 import { customColors } from "constants/index";
 
 const Main = () => {
   return (
     <Wrapper>
-      <TypoGraphy type="h1" weight="bold">
-        How to Health
-      </TypoGraphy>
+      <TitleBox>
+        <TypoGraphy type="h1" weight="bold">
+          <TitleAnimation>How to Health</TitleAnimation>
+        </TypoGraphy>
+      </TitleBox>
       <ButtonBox>
         <MuscleLink address="/muscles/chest" muscleKoreaName="가슴" circle />
         <MuscleLink address="/muscles/back" muscleKoreaName="등" circle />
@@ -43,5 +44,19 @@ const Wrapper = styled.div`
 `;
 const ButtonBox = styled.div`
   display: block;
+`;
+const TitleBox = styled.div`
+  display: flex;
+  width: 300px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: ${customColors.lightBlue};
+  border-radius: 10px;
+`;
+const TitleAnimation = styled.span`
+  animation: fadeInDown;
+  animation-duration: 3s;
+  color: ${customColors.yellow};
 `;
 export default Main;
