@@ -24,9 +24,10 @@ const MuscleButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   transition: transform, 1000ms ease-in-out;
-  background: ${customColors.btn};
   &:hover {
     transform: scale(1.2);
+    color: yellow;
+    font-weight: bold;
     background: rgb(67, 195, 226);
     background: radial-gradient(
       circle,

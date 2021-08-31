@@ -9,4 +9,5 @@ const Video = styled.iframe`
   margin: 30px 30px;
   width: 1080px;
   height: 700px;
+  border-radius: 10px;
 `;

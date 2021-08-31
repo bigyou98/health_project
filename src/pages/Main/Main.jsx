@@ -30,7 +30,7 @@ const Main = () => {
   );
 };
 const Wrapper = styled.div`
-  background-color: ${customColors.dark};
+  background-color: ${customColors.darkBlue};
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
