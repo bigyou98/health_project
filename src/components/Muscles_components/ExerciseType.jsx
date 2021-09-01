@@ -23,7 +23,8 @@ const Type = styled.div`
   font-size: 24px;
   font-weight: bold;
   padding: 20px 0px;
-  margin: 0 30px;
+  margin-left: 30px;
+  margin-bottom: -30px;
 `;
 
 const IntoType = styled.span`
