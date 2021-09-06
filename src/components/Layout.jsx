@@ -10,5 +10,4 @@ const Wrapper = styled.div`
   background-color: ${customColors.lightBlue};
   width: 100vw;
   height: 100vh;
-  user-select: none;
 `;

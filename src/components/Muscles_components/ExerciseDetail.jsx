@@ -34,10 +34,12 @@ export const ExerciseDetail = React.memo(({ exerciseData }) => {
 const Detail = styled.div`
   background-color: white;
   float: right;
-  border: 1px solid black;
   border-radius: 10px;
   margin: 30px 30px;
   width: 700px;
   height: 700px;
   overflow-y: auto;
+  box-shadow: 26px 25px 31px -6px rgba(0, 0, 0, 0.71);
+  -webkit-box-shadow: 26px 25px 31px -6px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 26px 25px 31px -6px rgba(0, 0, 0, 0.71);
 `;

@@ -17,7 +17,6 @@ const MusclesLink = ({ address, muscleKoreaName, circle = false }) => {
 };
 
 const MuscleButton = styled.button`
-  user-select: none;
   width: 250px;
   height: 250px;
   margin: 50px;
@@ -40,12 +39,11 @@ const MuscleButton = styled.button`
 
 const MuscleNameButton = styled.p`
   transition: transform, 500ms ease-in-out;
-  user-select: none;
-  color: black;
+  color: white;
   &:hover {
     transform: scale(1.2);
     text-decoration: none;
-    color: white;
+    color: yellow;
   }
 `;
 const StyledLink = styled(Link)`

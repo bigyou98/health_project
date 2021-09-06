@@ -27,7 +27,6 @@ export const Header = () => {
     </Wrapper>
   );
 };
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;

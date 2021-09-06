@@ -29,7 +29,6 @@ export const TypoGraphy = ({ children, type, weight }) => {
 
 const Font = styled.p`
   margin-left: 8px;
-  user-select: none;
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.fontWeight};
 `;

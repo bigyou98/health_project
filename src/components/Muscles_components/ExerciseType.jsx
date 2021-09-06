@@ -19,7 +19,6 @@ export const ExerciseType = ({ exerciseType, changeContent }) => {
 
 const Type = styled.div`
   display: flex;
-  user-select: none;
   font-size: 24px;
   font-weight: bold;
   padding: 20px 0px;
