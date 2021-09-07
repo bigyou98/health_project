@@ -13,7 +13,7 @@ import {
 
 const Root = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Route exact path="/" component={Main} />
       <Route path="/muscles/chest" component={Chest} />
       <Route path="/muscles/abs" component={Abs} />
